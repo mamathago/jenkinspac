@@ -1,0 +1,18 @@
+def sum(int a=10,int b)
+{
+  result = a+b
+  return (result)
+}
+
+pipeline {
+  agent any
+  stages {
+    stage('working with fn with default values') {
+      steps {
+        script {
+          println sum(20,30)
+        }
+      }
+    }
+  }
+}
